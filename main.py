@@ -41,7 +41,7 @@ playlist = sp.user_playlist_create(user=user_id, name=f"{date} Billboard 100", p
 sp.playlist_add_items(playlist_id=playlist["id"], items=song_uris)
 
 
-# TO TRACK YOUR CURRENT LIKED SONGS.
+# TO TRACK YOUR CURRENT LIKED SONGS.  # NOTE: YOU HAVE TO CHANGE THE 'SCOPE' TO 'user-library-read'
 
 # results = sp.current_user_saved_tracks()
 # for idx, item in enumerate(results['items'], 1):
