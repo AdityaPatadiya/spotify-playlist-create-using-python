@@ -39,20 +39,3 @@ for song in song_names:
 
 playlist = sp.user_playlist_create(user=user_id, name=f"{date} Billboard 100", public=False)
 sp.playlist_add_items(playlist_id=playlist["id"], items=song_uris)
-
-
-
-# results = sp.current_user_saved_tracks()
-# for idx, item in enumerate(results['items'], 1):
-#     track = item['track']
-#     print(idx, track['artists'][0]['name'], " – ", track['name'])
-
-# SEARCH FOR THE SONGS.
-
-# sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials(client_id=os.getenv('CLIENTID'),
-#                                                            client_secret=os.getenv('CLIENTSECRET')))
-#
-# results = sp.search(q='tum hi ho', limit=50)
-# for idx, track in enumerate(results['tracks']['items'], 1):
-#     print(idx, track['name'])
-
